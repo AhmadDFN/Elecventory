@@ -42,6 +42,7 @@
                         <div class="form-floating mb-3">
                             <input type="hidden" name="id" value="{{ @$produk->id }}">
                             <input type="hidden" name="produk_stok" value="{{ @$produk->produk_stok }}">
+                            <input type="hidden" name="old_foto" value="{{ @$produk->produk_foto }}">
                             <input type="text" class="form-control" id="produk_nama" name="produk_nama"
                                 value="{{ @$produk->produk_nama }}">
                             <label for="produk_nama" class="form-label">Nama Produk</label>
