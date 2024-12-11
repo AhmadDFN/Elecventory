@@ -106,7 +106,7 @@ function grandtotal() {
     // total = total - parseInt($("#txtDiskon").val());
 
     // PPN 11%
-    ppn = (12 / 100) * total;
+    ppn = (11 / 100) * total;
     $("#ppn").html("<span>Rp</span>" + number_format(ppn));
     $("#txtPPN").val(ppn);
 

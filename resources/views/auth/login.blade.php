@@ -102,6 +102,11 @@
         </div>
         <hr>
         <h3 class="text-center">Login Form</h3>
+        @if (@$errors->first('email'))
+            <div class="alert alert-primary" role="alert">
+                {{ @$errors->first('email') }}
+            </div>
+        @endif
         <hr>
         <form action="{{ url('auth/login') }}" method="post">
             @csrf

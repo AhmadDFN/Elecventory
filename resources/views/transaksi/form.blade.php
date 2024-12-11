@@ -103,7 +103,7 @@
                         <div class="other-item">
                             <div class="row">
                                 <div class="desc col-md-7">
-                                    <p><strong>PPN 12%</strong></p>
+                                    <p><strong>PPN 11%</strong></p>
                                 </div>
                                 <div class="price col-md-5">
                                     <p id="ppn"><span>Rp</span> 0</p>
