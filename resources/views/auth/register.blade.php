@@ -101,7 +101,7 @@
             </a>
         </div>
         <hr>
-        <h3 class="text-center">Login Form</h3>
+        <h3 class="text-center">Register Form</h3>
         <hr>
         <form action="{{ url('auth/register') }}" method="post">
             @csrf
@@ -120,7 +120,7 @@
                 <input type="password" class="form-control" id="password" placeholder="Enter your password"
                     name="password" />
             </div>
-            <button type="submit" class="btn btn-login w-100 mb-3">Login</button>
+            <button type="submit" class="btn btn-login w-100 mb-3">Daftar</button>
             <div class="text-center">
                 <span>Sudah ada akun? <a href="{{ url('/auth/login') }}" class="signup-link">Masuk Disini</a></span>
             </div>

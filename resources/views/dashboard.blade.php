@@ -15,7 +15,7 @@
         </div>
     @endif
     <div class="row mb-4">
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div class="card p-3">
                 <h3>Total Orders</h3>
                 <h5>{{ $total_transaksi }} orders</h5>
@@ -23,7 +23,7 @@
                     Details</a>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div class="card p-3">
                 <h3>Menu Items</h3>
                 <h5>{{ $total_produk }} items available</h5>
@@ -31,11 +31,18 @@
                     Menu</a>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div class="card p-3">
                 <h3>Customers</h3>
                 <h5>{{ $total_pelanggan }} customers</h5>
                 <a href="{{ url('/pelanggan') }}" class="btn btn-primary">Manage Customers</a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card p-3">
+                <h3>Kategori</h3>
+                <h5>{{ $total_categori }} Kategori</h5>
+                <a href="{{ url('/categori') }}" class="btn btn-primary">Manage Kategori</a>
             </div>
         </div>
     </div>
@@ -66,15 +73,6 @@
             <div class="card p-3">
                 <h3>Daily Revenue</h3>
                 <h5>Rp {{ number_format($rev_day, '0', ',', '.') }}</h5>
-            </div>
-        </div>
-    </div>
-
-    <div class="row mb-4">
-        <div class="col-md-12">
-            <div class="card p-3">
-                <h3>Down Payment</h3>
-                <h5>Rp 0</h5>
             </div>
         </div>
     </div>

@@ -107,7 +107,8 @@
                     <tr>
                         <td width="65%">
                             {{ $detail->produk_nama }}<br />
-                            @ {{ number_format($detail->detail_harga, '0', ',', '.') }} x {{ $detail->detail_jumlah }}
+                            @ {{ number_format($detail->detail_harga, '0', ',', '.') }} x
+                            {{ number_format($detail->detail_jumlah, '0', ',', '.') }}
                         </td>
                         <td width="35%" class="right price">{{ number_format($detail->subtotal, '0', ',', '.') }}
                         </td>

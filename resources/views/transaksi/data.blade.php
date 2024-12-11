@@ -32,10 +32,11 @@
                     <tbody>
                         @foreach (@$transaksis as $item)
                             <tr>
+                                {{--  @dd($transaksis)  --}}
                                 <th scope="row">{{ $loop->iteration }}</th>
                                 <td>{{ $item->trans_nota }}</td>
                                 <td>{{ $item->trans_tanggal }}</td>
-                                <td>{{ $item->trans_id_pelanggan }}</td>
+                                <td>{{ $item->pelanggan->pelanggan_nama }}</td>
                                 <td>{{ number_format($item->trans_gtotal, '0', ',', '.') }}</td>
                                 <td>{{ $item->catatan }}</td>
                                 <td>

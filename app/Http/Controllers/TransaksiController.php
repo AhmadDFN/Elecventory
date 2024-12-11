@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Requests\StoreTransaksiRequest;
 use App\Http\Requests\UpdateTransaksiRequest;
 use App\Models\detailTransaksi;
+use App\Models\Pengadaan;
 
 class TransaksiController extends Controller
 {
@@ -24,11 +25,12 @@ class TransaksiController extends Controller
      */
     public function index()
     {
+        $transaksis = Transaksi::with('pelanggan')->get();
+        // dd($transaksis);
         $data = [
             "title" => "Transaksi",
             'page' => 'Data Transaksi',
-            "pelanggans" => Pelanggan::All(),
-            'transaksis' => Transaksi::All(),
+            'transaksis' => $transaksis,
             'add' => $this->route . "create",
             'index' => $this->route,
         ];
@@ -72,7 +74,7 @@ class TransaksiController extends Controller
             "trans_id_pelanggan" => $request->input("trans_id_pelanggan"),
             "trans_gtotal" => $request->input("gtotal"),
             "trans_ppn" => $request->input("ppn"),
-            "catatan" => $request->input("catatan"),
+            "catatan" => 'Penjualan Toko',
         ]);
 
 
@@ -92,6 +94,14 @@ class TransaksiController extends Controller
                 "detail_jumlah" =>  $mn_jumlah[$i],
                 "detail_harga" =>  $mn_harga[$i],
                 "detail_total_harga" =>  $request->input("gtotal"),
+            ]);
+            Pengadaan::create([
+                "pengadaan_id_produk" =>  $mn_id[$i],
+                "pengadaan_tanggal" =>  date("Y-m-d h:i:s"),
+                "pengadaan_jumlah" =>  '-' . $mn_jumlah[$i],
+                "pengadaan_harga" =>  $mn_harga[$i],
+                "pengadaan_total" =>  $mn_harga[$i] * $mn_jumlah[$i],
+                "pengadaan_catatan" =>  'Barang Terjual',
             ]);
             $produk = Produk::find($mn_id[$i]);
             $produk->produk_stok -= $mn_jumlah[$i];
