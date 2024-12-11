@@ -17,32 +17,30 @@
     <div class="row mb-4">
         <div class="col-md-3">
             <div class="card p-3">
-                <h3>Total Orders</h3>
-                <h5>{{ $total_transaksi }} orders</h5>
-                <a href="{{ url('/transaksi') }}" class="btn btn-primary">View
-                    Details</a>
+                <h3>Transaksi</h3>
+                <h5>{{ $total_transaksi }} Order</h5>
+                <a href="{{ url('/transaksi') }}" class="btn btn-primary">Lihat Detail</a>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card p-3">
-                <h3>Menu Items</h3>
-                <h5>{{ $total_produk }} items available</h5>
-                <a href="{{ url('/produk') }}" class="btn btn-primary">Manage
-                    Menu</a>
+                <h3>Produk</h3>
+                <h5>{{ $total_produk }} Produk</h5>
+                <a href="{{ url('/produk') }}" class="btn btn-primary">Lihat Produk</a>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card p-3">
-                <h3>Customers</h3>
-                <h5>{{ $total_pelanggan }} customers</h5>
-                <a href="{{ url('/pelanggan') }}" class="btn btn-primary">Manage Customers</a>
+                <h3>Pelanggan</h3>
+                <h5>{{ $total_pelanggan }} Pelanggan</h5>
+                <a href="{{ url('/pelanggan') }}" class="btn btn-primary">Lihat Pelanggan</a>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card p-3">
                 <h3>Kategori</h3>
                 <h5>{{ $total_categori }} Kategori</h5>
-                <a href="{{ url('/categori') }}" class="btn btn-primary">Manage Kategori</a>
+                <a href="{{ url('/categori') }}" class="btn btn-primary">Lihat Kategori</a>
             </div>
         </div>
     </div>
@@ -50,13 +48,13 @@
     <div class="row mb-4">
         <div class="col-md-6">
             <div class="card p-3">
-                <h3>Yearly Revenue</h3>
+                <h3>Pendapatan Pertahun</h3>
                 <h5>Rp {{ number_format($rev_year, '0', ',', '.') }}</h5>
             </div>
         </div>
         <div class="col-md-6">
             <div class="card p-3">
-                <h3>Monthly Revenue</h3>
+                <h3>Pendapatan Perbulan</h3>
                 <h5>Rp {{ number_format($rev_month, '0', ',', '.') }}</h5>
             </div>
         </div>
@@ -65,13 +63,13 @@
     <div class="row mb-4">
         <div class="col-md-6">
             <div class="card p-3">
-                <h3>Weekly Revenue</h3>
+                <h3>Pendapatan Perminggu</h3>
                 <h5>Rp {{ number_format($rev_week, '0', ',', '.') }}</h5>
             </div>
         </div>
         <div class="col-md-6">
             <div class="card p-3">
-                <h3>Daily Revenue</h3>
+                <h3>Pendapatan Hari ini</h3>
                 <h5>Rp {{ number_format($rev_day, '0', ',', '.') }}</h5>
             </div>
         </div>
